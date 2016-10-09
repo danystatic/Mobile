@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Validacion de usuarios</title>
+<link rel="stylesheet" href="css/jquery.mobile-1.3.1.min.css" />
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/jquery.mobile-1.3.1.min.js"></script>
+<!-- Styles -->
+<link href="css/app.css" rel="stylesheet">
+<link rel="StyleSheet" href="dtree/css/dtree.css" type="text/css" />
+<link href="css/custom.css" rel="stylesheet">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<script type="text/javascript" src="dtree/js/dtree.js"></script>
+</head>
+
+<body>
+<div data-role="page" id="home" class="bgBlack">
+  <div data-role="content">
+    <div class="home-content"> <img src="images/logo.png" />
+      <div class="txtHome"> Experimenting with family and friends what we can build together , with the power of technology. </div>
+      <div class="contentHome">
+      </div>
+      <div class="star-rating">
+      <h3>Rate video</h3>
+      <div class="rate-stars"></div>
+      </div>
+      <div data-role="footer" data-position="fixed" data-tap-toggle="false" > 
+        <div class="continue-btn"> <a id="btn1-txt" href="#info-page" data-role="button" data-theme="a">Get Started</a> </div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<div data-role="page" id="info-page" class="bgBlack">
+  <div data-role="content">
+    <div class="home-content">
+      <div class="txtHome" id="home-content">
+       </div>
+      <div data-role="footer" data-position="fixed" data-tap-toggle="false"  data-toggle="false"> 
+        <div class="continue-btn"> <a id="btn2-txt" href="#video-page" data-role="button" data-theme="a"></a> </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+<div data-role="page" id="video-page" class="bgBlack">
+  <div data-role="content">
+    <div class="home-content">
+      <div class="txtHome">
+      <div class="video-iframe">
+      <iframe width="100%" height="300px" src="https://www.youtube.com/embed/Um63OQz3bjo" frameborder="0" allowfullscreen></iframe>
+      <div class="star-rating">
+      <h3>Rate video</h3>
+      <div class="rate-stars"></div>
+      </div>
+      </div>
+       </div>
+      <div data-role="footer" data-position="fixed" data-tap-toggle="false"  data-toggle="false"> 
+        <div class="continue-btn"> <a class="submit-rate-trigger" data-role="button" data-theme="a">Submit Rating</a> </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<div data-role="page" id="feedback-page" class="bgBlack">
+  <div data-role="content">
+    <div class="home-content"> <img src="images/logo.jpg" />
+      <div class="txtHome">
+      <form action="" method="post">
+       <h1>Share your comment !</h1>
+        <div data-role="fieldcontain" class="ui-hide-label">
+            <label for="username">Feedback / Comment</label>
+            <textarea cols="40" rows="8" name="textarea-1" id="feedback-txt"></textarea>
+        </div>
+        
+      </form>
+      
+       </div>
+      <div data-role="footer" data-position="fixed" data-tap-toggle="false"  data-toggle="false"> 
+        <div class="continue-btn"> <a class="feedback-trigger" data-role="button" data-theme="a">Submit</a> </div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+<div data-role="page" id="thx-page" class="bgBlack">
+  <div data-role="content">
+    <div class="home-content">
+      <div class="txtHome">
+      <div class="thx">
+      <i class="fa fa-thumbs-up"></i>
+      </div>
+      <p class="thx-msg">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+      
+      </p>
+      <button data-role="button" data-theme="a" class="exitApp">Exit App</button>
+      
+       </div>
+      
+      
+    </div>
+  </div>
+</div>
+
+
+<div data-role="dialog" id="sure" data-title="Are you sure?">
+  <div data-role="content">
+    <h3 class="sure-1">???</h3>
+    <p class="sure-2">???</p>
+    <a href="#" class="sure-do" data-role="button" data-theme="b" data-rel="back">Yes</a>
+    <a href="#" data-role="button" data-theme="c" data-rel="back">No</a>
+  </div>
+</div>
+
+<!--<div data-role="page" id="login-page" class="bgBlack">
+  <div data-role="content">
+    <div class="home-content"> <img src="images/logo.jpg" />
+      <div class="txtHome">
+      <form action="" method="post">
+       <h1>Login</h1>
+        <div data-role="fieldcontain" class="ui-hide-label">
+            <label for="username">Your Username</label>
+            <input type="text" name="username" id="username" value="" placeholder="Username"/>
+        </div>
+        <div data-role="fieldcontain" class="ui-hide-label">
+            <label for="username">Your Password</label>
+            <input type="text" name="username" id="username" value="" placeholder="Username"/>
+        </div>
+      </form>
+      
+       </div>
+      <div data-role="footer" data-position="fixed" data-tap-toggle="false"  data-toggle="false"> 
+        <div class="continue-btn"> <a href="#info-page" data-role="button" data-theme="a">Login</a> </div>
+        </div>
+      
+    </div>
+  </div>
+</div>-->
+
+
+
+
+<!--<div data-role="page" id="inicio">
+  <div data-role="header">
+    <h1>Autenticacion de Usuario</h1>
+  </div>
+  <div data-role="content">
+    <form id="formulario" >
+      <label> Usuario </label>
+      <input type="text" id="nombredeusuario" name="nombredeusuario">
+      <label> Password </label>
+      <input type="password" id="clave" name="clave" >
+      <input type="submit" value="Login" id="botonLogin">
+    </form>
+  </div>
+</div>-->
+<!--<div data-role="page" id="mlm">
+  <div data-role="header">
+    <h1>Bienvenido</h1>
+  </div>
+  <div data-role="content">
+    <h2> Countdownline: <span id="countdownline"></span></h2>
+    <h3> Su usuario y password son válidos: <span id="getdomain"></span></h3>
+    <button id="fill">llenar</button>
+    <div id="ResponseDiv"></div>
+    <h2>Vista de Invitados, Voluntarios, Amigos y Participantes</h2>
+    {{$lazyusers}}
+    <div class="dtree">
+      <p>
+      <h2><u><a style="font-size:1.3em" class="btn btn-primary" href="javascript: d.openAll();">Abrir</a></u> | <u><a style="font-size:1.3em" class="btn btn-primary" href="javascript: d.closeAll();">Cerrar</a></u></h2>
+      </p>
+    </div>
+    <div id="dtreegoodview"></div>
+  </div>
+</div>-->
+<script src="cordova.js"></script>
+<script src="js/starrr.min.js"></script>
+<script src="js/script.js"></script>
+<script>
+/*$('#enviar').click(function(e) {
+    e.preventDefault();
+
+    // information to be sent to the server
+    var info = $('#feedback').val();
+
+    $.mobile.allowCrossDomainPages = true;
+
+    $.ajax({
+        type: "POST",
+        url: 'http://bitcoinmerida.dev/api/feedback',
+        data: {foo: info},
+        crossDomain: true,
+        success: function(){
+
+        		alert("hey");
+        }
+
+    });
+
+    $('#feedback').val('Tu comentario fue enviado. \n Gracias por visitar!');
+});
+
+$('#mlm').click(function(){
+
+	rutaVariables = "http://bitcoinmerida.dev/api/mlm?jsoncallback=?" 
+
+	$.getJSON( rutaVariables ).done(function(respuestaServer){
+
+		alert(respuestaServer.countdownline + "\nGenerado en: " + respuestaServer.hora + "\n" +respuestaServer.generador);
+
+
+	});
+
+	$.mobile.changePage('#mlm');
+});
+
+$('#formulario').submit(function() { 
+	
+	 
+	// recolecta los valores que inserto el usuario
+	var datosUsuario = $("#nombredeusuario").val()
+	var datosPassword = $("#clave").val()
+	
+  	archivoValidacion = "http://bitcoinmerida.dev/api/valuacion?jsoncallback=?"
+
+  	//console.log(archivoValidacion);
+
+	$.getJSON( archivoValidacion, { usuario:datosUsuario ,password:datosPassword})
+	.done(function(respuestaServer) {
+		
+		alert(respuestaServer.mensaje + "\nGenerado en: " + respuestaServer.hora + "\n" +respuestaServer.generador)
+		
+		if(respuestaServer.validacion == "ok"){
+		  
+		 	/// si la validacion es correcta, muestra la pantalla "home"
+			$.mobile.changePage("#home")
+		  
+		}else{
+		  
+		  /// ejecutar una conducta cuando la validacion falla
+		}
+  
+	})
+	return false;
+})*/
+	
+</script> 
+<script>
+/*$('#fill').on('click', function(){
+
+   	alert('hey');
+   			console.log('after hey');
+     treeview = "yes this is the preview.";
+      $.ajax({
+         url : 'http://bitcoinmerida.dev/api/mlm?jsoncallback=?',
+         type: 'GET',
+         dataType: 'json',
+         success: function(data){
+   			console.log('after ajax');
+   			console.log(data);
+
+
+            $('#countdownline').html(data.dtreegoodview);
+            $('#countdownline').html(data.dtreegoodview);
+            $('#getdomain').html(data.dtreegoodview);	
+            $('#dtreelist').html(data.dtreelist);	
+ 
+	         }
+	      });
+	});*/
+</script>
+</body>
+</html>
